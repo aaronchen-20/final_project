@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        To complete this quiz, please fill out this questionnaire below. When done click submit. <br>
+        <form method="post" action=<%- action %>>
+
+            QUESTION 1: You see a classmate who dropped his books in the hallway. What do you do?
+            <select name="q1">
+                <option>Help them pick up their books</option>
+                <option>Walk away, it doesn't concern you.</option>
+                <option>Laugh at them</option>
+            </select><br>
+
+            QUESTION 2: You have a Final Exam/Project due in a month. What do you do?
+            <select name="q2">
+                <option>Start it today, get it over with fast.</option>
+                <option>Work on it gradually throughout the month</option>
+                <option>Do it the day before</option>
+                <option></option>
+            </select> <br>
+
+            QUESTION 3: Which of these traits best describe you?
+            <select name="q3">
+                <option>brave</option>
+                <option>cunning</option>
+                <option>clever</option>
+            </select> <br>
+            
+            Name (to be stored in database):<input name="username" type="text"><br>
+            <input type="submit" value="Submit Quiz">
+        </form>
+    </body>
+
+</html>
