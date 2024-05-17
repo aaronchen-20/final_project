@@ -56,18 +56,12 @@ async function insertPerson(client, app) {
     await client.db(database).collection(collection).insertOne(app)
 }
 
-
-
-
 app.get("/", (req, res) => {
     res.render("home");
 });
 
 app.get("/quiz", (req, res) => {
-    variables = {
-        action: `http://localhost:${portNumber}/quizFinished`
-    }
-    res.render("quiz", variables)
+    res.render("quiz");
 });
 
 app.post("/quizFinished", async (req, res) => {
@@ -95,9 +89,7 @@ app.post("/quizFinished", async (req, res) => {
         house = "gryffindor"
     } else if (score >= 0) {
         house = "ravenclaw"
-    } else if (score == -1) {
-        house = "muggle"
-    } else if (score == -2) {
+    } else if (score >= -2) {
         house = "hufflepuff"
     } else {
         house = "slytherin"
